@@ -1,0 +1,21 @@
+
+body {
+  font-family: Arial, Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+a {
+  color: #333;
+  
+
+}
+.container {
+  padding:0.1rem;
+}
+.btn-primary{
+  background: linear-gradient(145deg, #349aed 50%, #34d8ed 100%);
+}
+
+
+
+
+

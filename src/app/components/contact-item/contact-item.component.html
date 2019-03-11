@@ -1,0 +1,21 @@
+<div class="contact">
+  <div class="row">
+    <div class="col-md-12">
+      <p>
+        <a  routerLink="/contact/{{contact.id}}"><i class="fas fa-user"></i> {{contact.name}}</a>
+        <br>
+        <small>Email: {{contact.email}}</small>
+        <br>
+        <small>Phone: {{contact.phone}}</small>
+        
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-primary btn-sm mr-2" type="button" (click)="onEdit(contact)"><i class="fas fa-edit"></i> Edit</button>
+      <button type="button" class="btn btn-danger btn-sm" (click)="onDelete(contact)"><i class="fas fa-trash-alt"></i> Delete</button>
+    </div>
+  </div>
+
+</div>

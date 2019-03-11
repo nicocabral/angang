@@ -1,0 +1,53 @@
+<div>
+  <div class="row mb-3 mt-2">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+              <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label float-right">Name</label>
+                  <div class="col-sm-10">
+                
+                    <input type="text"  formControlName="name" class="form-control" name="name" [(ngModel)]="contact.name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" >
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required">Name is required</div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">Email</label>
+                  <div class="col-sm-10">
+                    <input type="email" formControlName="email" class="form-control" name="email" [(ngModel)]="contact.email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" >
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                      <div *ngIf="f.email.errors.required">Name is required</div>
+                  </div>
+                  </div>
+                  
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">Phone</label>
+                  <div class="col-sm-10">
+                    <input type="text" formControlName="phone" class="form-control" name="phone" [(ngModel)]="contact.phone"  [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" >
+                    <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                      <div *ngIf="f.phone.errors.required">Name is required</div>
+                  </div>
+                  </div>
+                </div>
+                <div class="float-right"> 
+                  <button class="btn btn-primary btn-sm" type="submit">Save Contact</button>
+                </div>
+              </form>
+               
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

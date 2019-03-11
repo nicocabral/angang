@@ -1,0 +1,13 @@
+<div >
+  <router-outlet></router-outlet>
+  <app-contact-add (addContact)="addContact($event)" [contact]="contact" (updateContact) = "updateContact($event)"></app-contact-add>
+  <app-contact-item 
+  *ngFor="let contact of contacts" 
+  [contact]="contact"
+  (deleteContact) = "deleteContact($event)"
+  (editContact) = "editContact($event)"
+  
+  >
+  </app-contact-item>
+  
+</div>
